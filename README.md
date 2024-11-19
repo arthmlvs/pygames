@@ -13,5 +13,10 @@ deactivate
 
 2. start program
 ```
-python3 app.py
+python3 main.py
+```
+
+3. install libraries
+```
+pip install pygame
 ```
