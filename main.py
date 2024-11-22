@@ -7,8 +7,9 @@ icon = pygame.image.load('images/icon.png')
 pygame.display.set_icon(icon)
 
 running = True 
-
 while running:
+
+    # screen.fill((255, 120, 3))
 
     pygame.display.update()
 
@@ -17,3 +18,6 @@ while running:
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
+        elif event.type  == pygame.KEYDOWN:
+            if event.key == pygame.K_a:
+                screen.fill((3, 230, 255))    
