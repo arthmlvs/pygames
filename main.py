@@ -6,11 +6,15 @@ pygame.display.set_caption("pygame artemijs")
 icon = pygame.image.load('images/icon.png')
 pygame.display.set_icon(icon)
 
+square = pygame.Surface((50, 50))
+square.fill('Orange')
+
 running = True 
 while running:
 
-    # screen.fill((255, 120, 3))
+    screen.blit(square, (600/2-50/2, 300/2-50/2))
 
+    pygame.draw.circle(square, 'blue', (1, 1), 6)
     pygame.display.update()
 
     for event in pygame.event.get():
@@ -18,6 +22,4 @@ while running:
         if event.type == pygame.QUIT:
             running = False
             pygame.quit()
-        elif event.type  == pygame.KEYDOWN:
-            if event.key == pygame.K_a:
-                screen.fill((3, 230, 255))    
+        
